@@ -38,3 +38,8 @@ select distinct contenido from cajas;
 /*3.4. Obtener el valor medio de todas las cajas*/
 select avg(valor) as valor_medio from cajas;
 
+/*3.5. Obtener el valor medio de las cajas de cada almacen*/
+select  avg(valor) as valor_medio from cajas group by almacen;
+
+/*3.6. Obtener los codigos de los almacenes en los cuales el valor medio de las cajas sea superior a 150€*/
+
