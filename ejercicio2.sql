@@ -47,3 +47,8 @@ select * from empleados where departamento=37 or departamento=77;
 
 /*2.7. Obtenga todos los datos de los empleados cuyo apellido comience por 'P'.*/
 select * from empleados where apellidos like 'P%';
+
+/*2.8. Obtener el presupuesto total de todos los departamentos*/
+select sum(presupuesto) as presupuesto_total from departamentos;
+
+/*2.9. Obtener el numero de empleados de cada departamento*/
