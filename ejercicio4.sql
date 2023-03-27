@@ -50,6 +50,7 @@ select peliculas.nombre from peliculas left join salas on peliculas.codigo = sal
 where salas.codigo is null;
 
 /*4.8. Añadir una nueva película 'Uno, Dos, Tres', para mayores de 7 años.*/
+insert into peliculas values (10, 'Uno, Dos, Tres','7');
 
 /*4.9. Hacer constar que todas las peliculas no calificadas han sido calificadas 
 'no recomendables para menores de 13 años*/
