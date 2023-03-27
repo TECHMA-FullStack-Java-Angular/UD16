@@ -63,3 +63,13 @@ select cajas.numreferencia from cajas join almacenes on almacenes.codigo=cajas.a
 
 /*3.11. Insertar un nuevo almacén en Barcelona xon capacidad para 3 cajas*/
 insert into almacenes values (6, 'Barcelona', 3);
+
+/*3.12. Insertar una nueva caja, con número de referencia 'H5RT', con contenido 'Papel' valor 200, 
+y situada en el almacen 2. */
+insert into cajas values('H5RT','Papel',200,2);
+
+/*3.13. Rebajar el valor de todas las cajas un 15%*/
+
+
+
+
