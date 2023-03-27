@@ -83,3 +83,11 @@ igual a 180€ y ordenarlos descendentemente por precio, y luego ascendentemente
   /*1.15. Obtener el nombre y precio del articulo mas barato*/
   select nombre, precio from articulos order by precio asc limit 1;
   
+  /*1.16. Obtener una lista con el nombre y precio de los artículos más caros de cada proveedor 
+  (incluyendo el nombre del proveedor).*/
+ select fabricantes.nombre as fabricante, articulos.nombre as articulo, articulos.precio 
+from articulos join fabricantes on articulos.fabricante = fabricantes.codigo
+where articulos.precio in (select max(precio) from articulos where fabricante=articulos.fabricante 
+group by fabricante)
+order by fabricantes.nombre;
+  
