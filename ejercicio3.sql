@@ -69,6 +69,7 @@ y situada en el almacen 2. */
 insert into cajas values('H5RT','Papel',200,2);
 
 /*3.13. Rebajar el valor de todas las cajas un 15%*/
+update cajas set valor= valor*0.85;
 
 
 
