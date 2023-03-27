@@ -71,6 +71,12 @@ insert into cajas values('H5RT','Papel',200,2);
 /*3.13. Rebajar el valor de todas las cajas un 15%*/
 update cajas set valor= valor*0.85;
 
+/*3.14. Rebajar un 20% el valor de todas las cajas cuyo valor sea superior al valor medio de todas las cajas*/
+update cajas set valor= valor*0.8 where valor > (select avg(valor) from cajas);
+
+/*3.15. Eliminar todas las cajas cuyo valor sea inferior a 100€*/
+
+/*3.16. Vaciar el contenido de los almacenes que están saturados*/
 
 
 
