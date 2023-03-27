@@ -30,3 +30,6 @@ select apellidos from empleados;
 
 /*2.2. Obtener los apellidos de los empleados sin repeticiones*/
 select distinct apellidos from empleados ;
+
+/*2.3. Obtener todos los datos de los empleados que se apellidan 'Smith'*/
+select * from empleados where apellidos='Smith';
