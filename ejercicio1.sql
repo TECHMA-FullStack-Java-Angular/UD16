@@ -60,3 +60,9 @@ igual a 180€ y ordenarlos descendentemente por precio, y luego ascendentemente
  los datos del artículo y de su fabricante*/
  select articulos.*, fabricantes.* from articulos join fabricantes 
  on articulos.FABRICANTE=fabricantes.CODIGO;
+ 
+ /*1.11. Obtener un listado de aartículos, incluyendo el nombre del artículo, su precio, 
+ y el nombre de su fabrincante*/
+ select articulos.nombre, articulos.precio, fabricantes.nombre as fabricante from articulos join fabricantes
+ on articulos.fabricante=fabricantes.codigo;
+ 
