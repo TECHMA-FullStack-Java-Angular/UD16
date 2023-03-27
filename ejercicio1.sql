@@ -74,3 +74,9 @@ igual a 180€ y ordenarlos descendentemente por precio, y luego ascendentemente
  /*1.13. Obtener el precio medio de los productos de cada fabricante, mostrando el nombre del fabricante.*/
  select avg(articulos.precio) as precio_medio, fabricantes.nombre as fabricante from articulos
   join fabricantes on articulos.fabricante=fabricantes.codigo group by fabricantes.nombre;
+  
+  /*1.14. Obtener los nombre de los fabricantes que ofrezcan productos cuyo precio medio sea mayor o igual a 150€*/
+  select fabricantes.nombre as fabricantes from articulos  join fabricantes 
+  on articulos.fabricante=fabricantes.codigo group by fabricantes.nombre
+  having avg (articulos.precio) >=150;
+  
