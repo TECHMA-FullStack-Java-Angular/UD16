@@ -72,12 +72,17 @@ insert into cajas values('H5RT','Papel',200,2);
 update cajas set valor= valor*0.85;
 
 /*3.14. Rebajar un 20% el valor de todas las cajas cuyo valor sea superior al valor medio de todas las cajas*/
-update cajas set valor= valor*0.8 where valor > (select avg(valor) from cajas);
+update cajas set valor = valor * 0.8 where valor > (select avg_valor from ( select avg(valor) as avg_valor
+	from cajas) as alias);
 
 /*3.15. Eliminar todas las cajas cuyo valor sea inferior a 100€*/
 delete from cajas where valor<100;
 
 /*3.16. Vaciar el contenido de los almacenes que están saturados*/
+delete from cajas where almacen in( select almacenes.codigo from almacenes join (select almacen, count(*) 
+as num_cajas from cajas group by almacen) cajas on almacenes.codigo=cajas.almacen 
+where almacenes.capacidad< cajas.num_cajas);
+
 
 
 
