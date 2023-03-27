@@ -43,3 +43,6 @@ select nombre, precio*166.386 as precio_pesetas from articulos;
 
 /*1.6. Seleccionar el precio medio de todos los productos*/
 select avg (precio) as precio_medio from articulos;
+
+/*1.7. Obtener el precio medio de los articulos cuyo código de fabricante sea 2*/
+select avg(precio) as precio_medio from articulos where FABRICANTE=2;
