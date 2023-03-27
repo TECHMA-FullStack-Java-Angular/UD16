@@ -60,3 +60,5 @@ select * from empleados join departamentos on departamentos.codigo=empleados.dep
 
 /*2.11. Obtener un listado completo de empleados, incluyendo el nombre y apellidos del empleado junto 
 al nombre y presupuesto de su departamento.*/
+select empleados.nombre, empleados.apellidos, departamentos.nombre as nombre_departamento, departamentos.presupuesto
+from empleados join departamentos on departamentos.codigo=empleados.departamento;
