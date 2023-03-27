@@ -58,5 +58,8 @@ a la capacidad)*/
 select almacenes.codigo from almacenes join (select almacen, count(*) as num_cajas from cajas 
 group by almacen) cajas on almacenes.codigo = cajas.almacen where cajas.num_cajas > almacenes.capacidad;
 
+/*3.10. Obtener los numeros de referencia de las cajas que están en Bilbao*/
+select cajas.numreferencia from cajas join almacenes on almacenes.codigo=cajas.almacen where almacenes.lugar='Bilbao';
 
+/*3.11. Insertar un nuevo almacén en Barcelona xon capacidad para 3 cajas*/
 
