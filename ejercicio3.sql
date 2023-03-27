@@ -45,3 +45,6 @@ select  avg(valor) as valor_medio from cajas group by almacen;
 select almacenes.codigo from almacenes join cajas on almacenes.codigo=cajas.almacen group by almacenes.codigo
 having avg(cajas.valor)>150 ;
 
+/*3.7. Obtener el numero de referencia de cada caja junto con el numbre de la ciudad en el que se encuentra.*/
+select cajas.numreferencia as referencia, almacenes.lugar as ciudad from cajas join almacenes on almacenes.codigo=cajas.almacen ;
+
