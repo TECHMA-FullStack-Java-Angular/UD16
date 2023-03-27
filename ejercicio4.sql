@@ -39,3 +39,5 @@ select * from salas where pelicula is null;
 
 /*4.5. Mostrar la informacion de todas las salas y, si se proyecta alguna pelicula en la sala, mostrar también la 
 información de la pelicula.*/
+select * from salas left join peliculas on salas.pelicula = peliculas.codigo;
+
