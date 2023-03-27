@@ -90,4 +90,16 @@ update departamentos set presupuesto= presupuesto*0.9;
 informatica (cógigo 14)*/
 update empleados set departamento = 14  where departamento=77;
 
+/*2.18. Despedir a todos los empleados que trabajan para el departamento de informatica (codigo 14)*/
+delete from empleados where departamento=14;
+
+/*2.19. Despedir a todos los empleados que trabajen para departamentos cuyo presupuesto sea superior a los 60000€*/
+
+/*2.20. Despedir a todos los empleados*/
+
+
+
+
+
+
 
