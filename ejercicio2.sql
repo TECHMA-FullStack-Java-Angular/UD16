@@ -39,3 +39,8 @@ select * from empleados where apellidos='Smith' or apellidos='Rogers';
 
 /*2.5. Obtener todos los datos de los empleados que trabajan para el departamento 14.*/
 select * from empleados where departamento=14;
+
+/*2.6. Obtener todos los datos de los empleados que trabajan para el departamento 37 y para el departamento 77.
+Entiendo que pide los datos de los empleados que trabajan para el departamento 37 y de los empleados que trabajan
+para el departamento 77 ya que no hay empleados que trabajen en 2 departamentos al mismo tiempo*/
+select * from empleados where departamento=37 or departamento=77;
