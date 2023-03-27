@@ -93,3 +93,7 @@ order by fabricantes.nombre;
 
 /*1.17. Añadir un nuevo producto: Altavoces de 70€ (del fabricante 2)*/
 insert into articulos values (11,'Altavoces', 70,2);
+
+/*1.18. Cambiar el nombre del producto 8 a 'Impresora Laser'*/
+update articulos set nombre='Impresora Laser'
+where codigo=8;
