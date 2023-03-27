@@ -62,3 +62,14 @@ select * from empleados join departamentos on departamentos.codigo=empleados.dep
 al nombre y presupuesto de su departamento.*/
 select empleados.nombre, empleados.apellidos, departamentos.nombre as nombre_departamento, departamentos.presupuesto
 from empleados join departamentos on departamentos.codigo=empleados.departamento;
+
+/*2.12. Obtener los nombres y apellidos de los empleados que trabajen en departamentos cuyo presupuesto sea 
+mayor de 60.000€*/
+select empleados.nombre, empleados.apellidos from empleados join departamentos 
+on departamentos.codigo=empleados.departamento where departamentos.presupuesto in( select presupuesto 
+from departamentos where presupuesto > 60000);
+
+/*2.13. Obtener los datos de los departamentos cuyo presupuesto es superior al presupuesto medio de todos
+ los departamentos*/
+
+/*2.14. Obtener los nombres (únicamente los nombres) de los departamentos que tienen más de dos empleados*/
