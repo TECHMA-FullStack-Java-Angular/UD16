@@ -29,6 +29,7 @@ INSERT INTO `salas` VALUES (1,'Odeon',5),(2,'Imperial',1),(3,'Majestic',NULL),(4
 select * from peliculas;
 
 /*4.2. Mostras las distintas calificaciones de edad que existen*/
+select distinct calificacionedad  as calificacion_edad from peliculas;
 
 /*4.3. Mostrar todas las películas que no han sido calificadas*/
 
