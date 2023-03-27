@@ -34,7 +34,8 @@ select distinct calificacionedad  as calificacion_edad from peliculas;
 /*4.3. Mostrar todas las películas que no han sido calificadas*/
 select * from peliculas where calificacionedad is null;
 
-/*4.4. Mostrar todas las salas qe no proyectan ninguna pelicula*/
+/*4.4. Mostrar todas las salas que no proyectan ninguna pelicula*/
+select * from salas where pelicula is null;
 
 /*4.5. Mostrar la informacion de todas las salas y, si se proyecta alguna pelicula en la sala, mostrar también la 
 información de la pelicula.*/
