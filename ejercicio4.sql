@@ -57,3 +57,4 @@ insert into peliculas values (10, 'Uno, Dos, Tres','7');
 update peliculas set calificacionedad=13 where calificacionedad is null;
 
 /*4.10. Eliminar todas las salas que proyectan peliculas recomendadas para todos los publicos*/
+delete from salas where pelicula in (select codigo from peliculas where calificacionedad= 'G');
