@@ -46,5 +46,12 @@ select almacenes.codigo from almacenes join cajas on almacenes.codigo=cajas.alma
 having avg(cajas.valor)>150 ;
 
 /*3.7. Obtener el numero de referencia de cada caja junto con el numbre de la ciudad en el que se encuentra.*/
-select cajas.numreferencia as referencia, almacenes.lugar as ciudad from cajas join almacenes on almacenes.codigo=cajas.almacen ;
+select cajas.numreferencia as referencia, almacenes.lugar as ciudad from cajas join almacenes 
+on almacenes.codigo=cajas.almacen ;
 
+/*3.8. Obtener el numero de cajas que hay en cada almacén*/
+select almacenes.codigo as codigo_almacen, count(cajas.numreferencia) as cantidad_cajas from almacenes join cajas 
+on almacenes.codigo=cajas.almacen group by almacenes.codigo;
+
+/*Obtener los codigos de los almacenes que estan saturados (los almacenes donde el numero de cajas es superior 
+a la capacidad)*/
