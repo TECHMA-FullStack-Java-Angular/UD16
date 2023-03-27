@@ -53,3 +53,10 @@ select sum(presupuesto) as presupuesto_total from departamentos;
 
 /*2.9. Obtener el numero de empleados de cada departamento*/
 select count(dni) as numero_empleado, departamento from empleados group by departamento;
+
+/*2.10. Obtener un listado completo de empleados, incluyendo por cada empleado los datos del empleado 
+y de su departamento*/
+select * from empleados join departamentos on departamentos.codigo=empleados.departamento;
+
+/*2.11. Obtener un listado completo de empleados, incluyendo el nombre y apellidos del empleado junto 
+al nombre y presupuesto de su departamento.*/
