@@ -62,4 +62,4 @@ group by almacen) cajas on almacenes.codigo = cajas.almacen where cajas.num_caja
 select cajas.numreferencia from cajas join almacenes on almacenes.codigo=cajas.almacen where almacenes.lugar='Bilbao';
 
 /*3.11. Insertar un nuevo almacén en Barcelona xon capacidad para 3 cajas*/
-
+insert into almacenes values (6, 'Barcelona', 3);
