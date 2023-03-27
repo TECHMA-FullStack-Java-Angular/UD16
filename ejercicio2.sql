@@ -44,3 +44,6 @@ select * from empleados where departamento=14;
 Entiendo que pide los datos de los empleados que trabajan para el departamento 37 y de los empleados que trabajan
 para el departamento 77 ya que no hay empleados que trabajen en 2 departamentos al mismo tiempo*/
 select * from empleados where departamento=37 or departamento=77;
+
+/*2.7. Obtenga todos los datos de los empleados cuyo apellido comience por 'P'.*/
+select * from empleados where apellidos like 'P%';
