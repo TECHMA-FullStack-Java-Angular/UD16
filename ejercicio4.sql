@@ -46,6 +46,8 @@ la información de la sala.*/
 select * from peliculas left join salas on salas.pelicula=peliculas.codigo;
 
 /*4.7. Mostrar los nombres de las peliculas que no se proyectan en ninguna sala.*/
+select peliculas.nombre from peliculas left join salas on peliculas.codigo = salas.pelicula
+where salas.codigo is null;
 
 /*4.8. Añadir una nueva película 'Uno, Dos, Tres', para mayores de 7 años.*/
 
