@@ -90,4 +90,6 @@ from articulos join fabricantes on articulos.fabricante = fabricantes.codigo
 where articulos.precio in (select max(precio) from articulos where fabricante=articulos.fabricante 
 group by fabricante)
 order by fabricantes.nombre;
-  
+
+/*1.17. Añadir un nuevo producto: Altavoces de 70€ (del fabricante 2)*/
+insert into articulos values (11,'Altavoces', 70,2);
