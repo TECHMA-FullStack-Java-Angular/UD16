@@ -32,3 +32,6 @@ select * from almacenes;
 /*3.2. Obtener todas las cajas cuyo contenido tenga un valor superior a 150€*/
 select numreferencia from cajas where valor >150;
 
+/*3.3. Obtener los tipos de contenido de las cajas*/
+select distinct contenido from cajas
+
