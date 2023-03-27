@@ -94,6 +94,7 @@ update empleados set departamento = 14  where departamento=77;
 delete from empleados where departamento=14;
 
 /*2.19. Despedir a todos los empleados que trabajen para departamentos cuyo presupuesto sea superior a los 60000€*/
+delete from empleados where departamento in (select codigo from departamentos where presupuesto > 60000);
 
 /*2.20. Despedir a todos los empleados*/
 
