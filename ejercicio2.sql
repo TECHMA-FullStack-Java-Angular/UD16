@@ -52,3 +52,4 @@ select * from empleados where apellidos like 'P%';
 select sum(presupuesto) as presupuesto_total from departamentos;
 
 /*2.9. Obtener el numero de empleados de cada departamento*/
+select count(dni) as numero_empleado, departamento from empleados group by departamento;
