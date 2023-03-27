@@ -27,3 +27,6 @@ INSERT INTO `empleados` VALUES (123234877,'Michael','Rogers',14),(152934485,'Ana
 
 /*2.1. Obtener los apellidos de los empleados*/
 select apellidos from empleados;
+
+/*2.2. Obtener los apellidos de los empleados sin repeticiones*/
+select distinct apellidos from empleados ;
