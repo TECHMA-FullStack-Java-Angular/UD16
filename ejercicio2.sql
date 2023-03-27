@@ -71,5 +71,7 @@ from departamentos where presupuesto > 60000);
 
 /*2.13. Obtener los datos de los departamentos cuyo presupuesto es superior al presupuesto medio de todos
  los departamentos*/
+ select * from departamentos where presupuesto > (select avg(presupuesto) from departamentos) 
+ group by codigo, nombre, presupuesto;
 
 /*2.14. Obtener los nombres (únicamente los nombres) de los departamentos que tienen más de dos empleados*/
