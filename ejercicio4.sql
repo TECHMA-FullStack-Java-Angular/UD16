@@ -54,5 +54,6 @@ insert into peliculas values (10, 'Uno, Dos, Tres','7');
 
 /*4.9. Hacer constar que todas las peliculas no calificadas han sido calificadas 
 'no recomendables para menores de 13 años*/
+update peliculas set calificacionedad=13 where calificacionedad is null;
 
 /*4.10. Eliminar todas las salas que proyectan peliculas recomendadas para todos los publicos*/
