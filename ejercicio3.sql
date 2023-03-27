@@ -33,5 +33,8 @@ select * from almacenes;
 select numreferencia from cajas where valor >150;
 
 /*3.3. Obtener los tipos de contenido de las cajas*/
-select distinct contenido from cajas
+select distinct contenido from cajas;
+
+/*3.4. Obtener el valor medio de todas las cajas*/
+select avg(valor) as valor_medio from cajas;
 
