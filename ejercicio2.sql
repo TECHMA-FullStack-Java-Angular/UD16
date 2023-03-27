@@ -97,7 +97,7 @@ delete from empleados where departamento=14;
 delete from empleados where departamento in (select codigo from departamentos where presupuesto > 60000);
 
 /*2.20. Despedir a todos los empleados*/
-
+delete from empleados;
 
 
 
