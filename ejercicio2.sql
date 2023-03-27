@@ -83,5 +83,9 @@ vinculado al departamento recién creado: Esther Vásquez, DNI:89267109*/
 insert into departamentos values (11, 'Calidad', 40000);
 insert into empleados values (89267109, 'Esther','Vásquez',11);
 
+/*2.16. Aplicar un recorte presupuestario del 10% a todos los departamentos*/
+update departamentos set presupuesto= presupuesto*0.9;
 
+/*2.17. Reasignar a los empleados del departamento de investigación (código 77) al departamento de 
+informatica (cógigo 14)*/
 
