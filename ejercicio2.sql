@@ -78,7 +78,10 @@ from departamentos where presupuesto > 60000);
 select departamentos.nombre as nombre_departamento from departamentos join empleados 
 on departamentos.codigo=empleados.departamento group by departamentos.nombre having count(*) > 2;
 
-
+/*2.15. Añadir un nuevo departamentos: 'Calidad', con presupuesto de 40.000€ y código 11. Añadir un empleado 
+vinculado al departamento recién creado: Esther Vásquez, DNI:89267109*/
+insert into departamentos values (11, 'Calidad', 40000);
+insert into empleados values (89267109, 'Esther','Vásquez',11);
 
 
 
