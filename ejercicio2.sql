@@ -88,4 +88,6 @@ update departamentos set presupuesto= presupuesto*0.9;
 
 /*2.17. Reasignar a los empleados del departamento de investigación (código 77) al departamento de 
 informatica (cógigo 14)*/
+update empleados set departamento = 14  where departamento=77;
+
 
