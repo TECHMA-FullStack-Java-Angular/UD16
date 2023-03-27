@@ -53,5 +53,10 @@ on almacenes.codigo=cajas.almacen ;
 select almacenes.codigo as codigo_almacen, count(cajas.numreferencia) as cantidad_cajas from almacenes join cajas 
 on almacenes.codigo=cajas.almacen group by almacenes.codigo;
 
-/*Obtener los codigos de los almacenes que estan saturados (los almacenes donde el numero de cajas es superior 
+/*3.9. Obtener los codigos de los almacenes que estan saturados (los almacenes donde el numero de cajas es superior 
 a la capacidad)*/
+select almacenes.codigo from almacenes join (select almacen, count(*) as num_cajas from cajas 
+group by almacen) cajas on almacenes.codigo = cajas.almacen where cajas.num_cajas > almacenes.capacidad;
+
+
+
