@@ -40,3 +40,6 @@ select * from articulos where precio between 60 and 120;
 /*1.5. Obtener el nombre y el precio en pesetas (es decir, el precio en euros multiplicado
 por 166'386)*/
 select nombre, precio*166.386 as precio_pesetas from articulos;
+
+/*1.6. Seleccionar el precio medio de todos los productos*/
+select avg (precio) as precio_medio from articulos;
