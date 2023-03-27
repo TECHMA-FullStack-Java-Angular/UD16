@@ -42,4 +42,6 @@ select avg(valor) as valor_medio from cajas;
 select  avg(valor) as valor_medio from cajas group by almacen;
 
 /*3.6. Obtener los codigos de los almacenes en los cuales el valor medio de las cajas sea superior a 150€*/
+select almacenes.codigo from almacenes join cajas on almacenes.codigo=cajas.almacen group by almacenes.codigo
+having avg(cajas.valor)>150 ;
 
