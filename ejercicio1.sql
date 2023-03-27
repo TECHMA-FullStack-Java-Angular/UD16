@@ -61,8 +61,12 @@ igual a 180€ y ordenarlos descendentemente por precio, y luego ascendentemente
  select articulos.*, fabricantes.* from articulos join fabricantes 
  on articulos.FABRICANTE=fabricantes.CODIGO;
  
- /*1.11. Obtener un listado de aartículos, incluyendo el nombre del artículo, su precio, 
+ /*1.11. Obtener un listado de artículos, incluyendo el nombre del artículo, su precio, 
  y el nombre de su fabrincante*/
- select articulos.nombre, articulos.precio, fabricantes.nombre as fabricante from articulos join fabricantes
- on articulos.fabricante=fabricantes.codigo;
+ select articulos.nombre, articulos.precio, fabricantes.nombre as fabricante 
+ from articulos join fabricantes on articulos.fabricante=fabricantes.codigo;
  
+ /*1.12. Obtener el precio medio de los productos de cada fabricante, mostrando solo los 
+ códigos de fabricante.*/
+ select avg(articulos.precio) as precio_medio, fabricantes.codigo as codigo_fabricante from articulos
+ join fabricantes on articulos.fabricante=fabricantes.codigo group by fabricantes.codigo;
