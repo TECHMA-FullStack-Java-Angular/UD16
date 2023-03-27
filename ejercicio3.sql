@@ -75,6 +75,7 @@ update cajas set valor= valor*0.85;
 update cajas set valor= valor*0.8 where valor > (select avg(valor) from cajas);
 
 /*3.15. Eliminar todas las cajas cuyo valor sea inferior a 100€*/
+delete from cajas where valor<100;
 
 /*3.16. Vaciar el contenido de los almacenes que están saturados*/
 
