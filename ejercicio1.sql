@@ -100,3 +100,6 @@ where codigo=8;
 
 /*1.19. Aplicar un descuento de 10%(multiplicar el precio por 0.9) a todos los productos*/
 update articulos set precio= precio*0.9;
+
+/*1.20. Aplicar un descuento de 10€ a todos los productos cuyo precio sea mayor o igual a 120€*/
+update articulos set precio=precio + 10 where precio >= 120;
