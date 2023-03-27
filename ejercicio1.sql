@@ -50,4 +50,8 @@ select avg(precio) as precio_medio from articulos where FABRICANTE=2;
 /*1.8. Obtener el numero de articulos cuyo precio sea mayor o igual a 180€*/
 select count(nombre)  from articulos where precio >=180;
 
-/*1.9. */
+/*1.9. Obtener el nombre y precio de los articulos cuyo precio sea mayor o 
+igual a 180€ y ordenarlos descendentemente por precio, y luego ascendentemente
+ por nombre.*/
+ select nombre, precio from articulos where precio >=180 order by precio;
+ select nombre, precio from articulos where precio >=180 order by nombre desc;
