@@ -80,3 +80,6 @@ igual a 180€ y ordenarlos descendentemente por precio, y luego ascendentemente
   on articulos.fabricante=fabricantes.codigo group by fabricantes.nombre
   having avg (articulos.precio) >=150;
   
+  /*1.15. Obtener el nombre y precio del articulo mas barato*/
+  select nombre, precio from articulos order by precio asc limit 1;
+  
