@@ -27,5 +27,8 @@ INSERT INTO `cajas` VALUES ('0MN7','Rocks',180,3),('4H8P','Rocks',250,1),('4RT3'
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
 /*3.1. Obtener todos los almacenes*/
-select * from almacenes
+select * from almacenes;
+
+/*3.2. Obtener todas las cajas cuyo contenido tenga un valor superior a 150€*/
+select numreferencia from cajas where valor >150;
 
