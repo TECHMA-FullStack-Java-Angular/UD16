@@ -75,3 +75,10 @@ from departamentos where presupuesto > 60000);
  group by codigo, nombre, presupuesto;
 
 /*2.14. Obtener los nombres (únicamente los nombres) de los departamentos que tienen más de dos empleados*/
+select departamentos.nombre as nombre_departamento from departamentos join empleados 
+on departamentos.codigo=empleados.departamento group by departamentos.nombre having count(*) > 2;
+
+
+
+
+
